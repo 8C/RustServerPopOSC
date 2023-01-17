@@ -12,3 +12,6 @@ Params
  
 ![parammm](https://user-images.githubusercontent.com/26947031/213022282-9a0b8733-dbf6-4220-91ab-c10c69a7153a.PNG)
 
+
+
+Rust+ alert OSC soon™
