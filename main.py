@@ -10,13 +10,13 @@ client = SimpleUDPClient(IP, PORT)
 buffer = 3 * 60 #3min
 
 
-def getPop():
+while True:
 
     serverReq= requests.get(f'https://api.battlemetrics.com/servers/{battleMetricsServerID}').text
     serverData = json.loads(serverReq)
 
     if serverData == None:
-        return
+        print('hehe lol xd')
 
     serverPlayers = serverData['data']['attributes']['players']
     serverMaxPlayers = serverData['data']['attributes']['maxPlayers']
@@ -32,8 +32,6 @@ def getPop():
         client.send_message("/avatar/parameters/serverPlayers", serverPlayers)
         client.send_message("/avatar/parameters/serverMaxPlayers", serverMaxPlayers)
         client.send_message("/avatar/parameters/serverQueue", serverQueue)
-        
-    time.sleep(buffer)
 
-while True: #l0l
-    getPop()
+        time.sleep(buffer)
+        
